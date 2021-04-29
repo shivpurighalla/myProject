@@ -1,0 +1,23 @@
+class Player{
+    constructor(x,y,width,height){
+        var options={
+
+        restititution:0,
+        density:1,
+        isStatic:true
+    }
+    this.body=Bodies.rectangle(x,y,width,height,options);
+    this.width=width;
+    this.height=height;
+    World.add(world,this.body);
+}
+display(){
+    push();
+    fill("yellow");
+    var angle=this.body.angle;
+    translate (this.body.position.x,this.body.position.y);
+    rotate(angle);
+    rect(0,0,50,50);
+    pop ();
+}
+};
